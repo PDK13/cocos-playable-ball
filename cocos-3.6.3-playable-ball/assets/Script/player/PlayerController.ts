@@ -9,11 +9,15 @@ export class PlayerController extends Component {
     spine: BaseSpine = null;
 
     m_control: boolean = true;
-    m_grounded: boolean = false;
-    m_baseScale: Vec3 = Vec3.ONE;
+    m_lockInput: boolean = false;
+    m_lockJump: boolean = false;
+    m_moveDirection: number = 0;
     m_ratioSize: number = 1;
-    m_finish: boolean = false;
+    m_baseScale: Vec3 = Vec3.ONE;
+    m_baseMass: number;
+    m_grounded: boolean = false;
     m_immortal: boolean = false;
+    m_finish: boolean = false;
 
     get isBig() {
         return this.m_ratioSize > 1;

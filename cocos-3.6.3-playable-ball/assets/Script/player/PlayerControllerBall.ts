@@ -38,14 +38,8 @@ export class PlayerControllerBall extends PlayerController {
     @property(AudioSource)
     finishAudio: AudioSource = null;
 
-    m_moveDirection: number = 0;
-    m_lockInput: boolean = false;
     m_baseRadius: number;
-    m_baseMass: number;
-    m_lockJump: boolean = false;
     m_bubbleColider: Collider2D = null;
-    m_finish: boolean = false;
-    m_immortal: boolean = false;
 
     onLoad() {
         this.rigidbody = this.getComponent(RigidBody2D);
