@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="10" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="Candy" tilewidth="128" tileheight="128" tilecount="18" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (1).png"/>
+  </tile>
+  <tile id="17">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (2).png"/>
+  </tile>
+  <tile id="16">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (3).png"/>
+  </tile>
+  <tile id="11">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (8).png"/>
+  </tile>
+  <tile id="9">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (10).png"/>
+  </tile>
+  <tile id="7">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (12).png"/>
+  </tile>
+  <tile id="15">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (4).png"/>
+  </tile>
+  <tile id="14">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (5).png"/>
+  </tile>
+  <tile id="13">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (6).png"/>
+  </tile>
+  <tile id="6">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (13).png"/>
+  </tile>
+  <tile id="2">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (17).png"/>
+  </tile>
+  <tile id="4">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (15).png"/>
+  </tile>
+  <tile id="12">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (7).png"/>
+  </tile>
+  <tile id="10">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (9).png"/>
+  </tile>
+  <tile id="8">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (11).png"/>
+  </tile>
+  <tile id="5">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (14).png"/>
+  </tile>
+  <tile id="1">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (18).png"/>
+  </tile>
+  <tile id="3">
+   <image width="128" height="128" source="../tile/tile candy/tile-candy (16).png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="19" name="Summer" tilewidth="1" tileheight="1" tilecount="0" columns="0"/>
+ <layer id="3" name="decor" width="30" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="ground" width="30" height="10">
+  <data encoding="csv">
+18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+</data>
+ </layer>
+</map>

@@ -1,0 +1,36 @@
+{
+  "layer": [
+    {
+      "name": "default",
+      "value": 1
+    },
+    {
+      "name": "game",
+      "value": 2
+    }
+  ],
+  "general": {
+    "designResolution": {
+      "width": 1920,
+      "height": 1080,
+      "fitHeight": true
+    }
+  },
+  "physics": {
+    "collisionMatrix": {
+      "0": 7,
+      "1": 1,
+      "2": 1
+    },
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "Monster"
+      },
+      {
+        "index": 2,
+        "name": "trigger"
+      }
+    ]
+  }
+}

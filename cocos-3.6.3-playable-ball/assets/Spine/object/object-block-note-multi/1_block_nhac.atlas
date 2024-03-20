@@ -1,0 +1,20 @@
+
+1_block_nhac.png
+size: 218,137
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 133, 133
+  orig: 135, 135
+  offset: 1, 1
+  index: -1
+1a
+  rotate: true
+  xy: 137, 55
+  size: 80, 79
+  orig: 80, 79
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,103 @@
+{
+"skeleton": {
+	"hash": "dumzkS2HIbHsvd/y9j4Uu0ul9ec",
+	"spine": "3.8.99",
+	"x": -66.99,
+	"y": -67.5,
+	"width": 135,
+	"height": 135,
+	"images": "./images/",
+	"audio": "D:/a_Mato/BallV/1_block_nhac"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "1", "parent": "root" },
+	{ "name": "1a", "parent": "1", "x": 2.07, "y": -1.89 }
+],
+"slots": [
+	{ "name": "1", "bone": "1", "attachment": "6" },
+	{ "name": "1a", "bone": "1a", "attachment": "6a" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1": {
+				"6": { "x": 0.51, "width": 135, "height": 135 }
+			},
+			"1a": {
+				"6a": { "x": -7.2, "y": 1.62, "width": 80, "height": 79 }
+			}
+		}
+	}
+],
+"animations": {
+	"attack": {
+		"slots": {
+			"1a": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.25, "c3": 0.394 },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			}
+		}
+	},
+	"attack2": {
+		"slots": {
+			"1a": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.25, "c3": 0 },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"1": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.436 },
+					{ "time": 0.2333, "y": -64.45 }
+				]
+			}
+		}
+	},
+	"attack2_1_2": {
+		"bones": {
+			"1": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.436 },
+					{ "time": 0.2333, "y": -64.45 }
+				]
+			}
+		}
+	},
+	"attack2_2": {
+		"bones": {
+			"1": {
+				"translate": [
+					{ "y": -64.45 }
+				]
+			}
+		}
+	},
+	"attack2_3": {
+		"bones": {
+			"1": {
+				"translate": [
+					{ "y": -64.45, "curve": 0.732, "c3": 0.75 },
+					{ "time": 0.2333 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"1a": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		}
+	},
+	"idle2": {}
+}
+}

@@ -1,0 +1,55 @@
+
+item_64.png
+size: 354,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lm
+  rotate: true
+  xy: 296, 22
+  size: 64, 17
+  orig: 64, 17
+  offset: 0, 0
+  index: -1
+mat
+  rotate: true
+  xy: 296, 88
+  size: 97, 22
+  orig: 97, 22
+  offset: 0, 0
+  index: -1
+mat_1
+  rotate: true
+  xy: 320, 92
+  size: 93, 15
+  orig: 93, 16
+  offset: 0, 0
+  index: -1
+may_1
+  rotate: false
+  xy: 2, 2
+  size: 292, 183
+  orig: 292, 183
+  offset: 0, 0
+  index: -1
+may_2
+  rotate: false
+  xy: 315, 6
+  size: 34, 36
+  orig: 34, 36
+  offset: 0, 0
+  index: -1
+may_3
+  rotate: false
+  xy: 315, 44
+  size: 34, 42
+  orig: 34, 43
+  offset: 0, 1
+  index: -1
+mieng
+  rotate: true
+  xy: 337, 148
+  size: 37, 15
+  orig: 37, 15
+  offset: 0, 0
+  index: -1
