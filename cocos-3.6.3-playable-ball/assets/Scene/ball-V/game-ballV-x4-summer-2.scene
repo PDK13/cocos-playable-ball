@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "game-auto",
+    "_name": "game-ballV-x4-summer-2",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -157,7 +157,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 1353.1658291457286,
+    "_orthoHeight": 849.4637223974763,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -2843,7 +2843,7 @@
     "showSwitch": false,
     "directStore": false,
     "androidLink": "https://play.google.com/store/apps/details?id=com.mgif.ball.v",
-    "iosLink": "",
+    "iosLink": "https://apps.apple.com/us/app/ball-v-red-boss-challenge/id6448114929",
     "panelComplete": {
       "__id__": 32
     },
@@ -7747,7 +7747,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1919.9999999999998,
+      "width": 1920,
       "height": 1080
     },
     "_anchorPoint": {
