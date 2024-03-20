@@ -88,6 +88,18 @@ export class BaseSpine extends Component {
 
     //
 
+    public SetAnimIndex(Index: number, Anim: string, Loop: boolean, DurationScale: boolean = false): number {
+        let Duration = this.spine.setAnimation(Index, Anim, Loop).animationEnd;
+        let Scale = DurationScale ? this.spine.timeScale : 1;
+        return Duration / Scale;
+    }
+
+    public SetAnimEmty(Index: number, MixDuration: number){
+        this.spine.getState().setEmptyAnimation(Index, MixDuration);
+    }
+
+    //
+
     public SetFaceL() {
         this.spine._skeleton.scaleX = -this.spineScaleXR;
     }
