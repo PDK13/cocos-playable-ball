@@ -7,3 +7,8 @@ https://thorbjorn.itch.io/tiled
 
 - Don't update version of Cocos Creator or Project Editor.
 (Support are limit on every version)
+
+- Playable ads for network size:
+Ironsource <= 5MB
+Mintegral <= 2.5MB
+Unity <= 5MB

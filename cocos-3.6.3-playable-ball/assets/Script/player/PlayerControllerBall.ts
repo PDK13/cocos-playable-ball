@@ -40,10 +40,19 @@ export class PlayerControllerBall extends PlayerController {
 
     m_baseRadius: number;
     m_bubbleColider: Collider2D = null;
+    m_lockInput: boolean = false;
+    m_lockJump: boolean = false;
+    m_moveDirection: number = 0;
+    m_ratioSize: number = 1;
+    m_baseScale: Vec3 = Vec3.ONE;
+    m_baseMass: number;
+    m_grounded: boolean = false;
+    m_immortal: boolean = false;
+    m_finish: boolean = false;
 
     onLoad() {
-        this.rigidbody = this.getComponent(RigidBody2D);
-        this.spine = this.getComponent(BaseSpine);
+        this.m_rigidbody = this.getComponent(RigidBody2D);
+        this.m_spine = this.getComponent(BaseSpine);
         //
         let collider = this.getComponent(CircleCollider2D);
         this.m_baseScale = this.node.scale.clone();
@@ -78,7 +87,7 @@ export class PlayerControllerBall extends PlayerController {
     }
 
     start() {
-        this.m_baseMass = this.rigidbody.getMass();
+        this.m_baseMass = this.m_rigidbody.getMass();
         if (this.autoRun && !Loader.finish)
             this.onPlayerMoveRight();
     }
@@ -89,18 +98,18 @@ export class PlayerControllerBall extends PlayerController {
         if (this.bubble.active)
             return;
         this.m_immortal = true;
-        this.rigidbody.gravityScale = 0;
-        this.rigidbody.linearVelocity = v2();
-        this.rigidbody.angularVelocity = 0;
+        this.m_rigidbody.gravityScale = 0;
+        this.m_rigidbody.linearVelocity = v2();
+        this.m_rigidbody.angularVelocity = 0;
         //
         tween(this.node).to(0.2, { worldPosition: worldPosition }).call(() => {
             this.m_bubbleColider.enabled = true;
             this.bubble.active = true;
-            this.rigidbody.gravityScale = -0.8;
-            this.rigidbody.fixedRotation = true;
-            let veloc = this.rigidbody.linearVelocity.clone();
+            this.m_rigidbody.gravityScale = -0.8;
+            this.m_rigidbody.fixedRotation = true;
+            let veloc = this.m_rigidbody.linearVelocity.clone();
             veloc = veloc.multiplyScalar(0.2);
-            this.rigidbody.linearVelocity = veloc;
+            this.m_rigidbody.linearVelocity = veloc;
         }).start();
         //
         this.scheduleOnce(() => {
@@ -117,9 +126,9 @@ export class PlayerControllerBall extends PlayerController {
         this.m_lockJump = true;
         this.jumpAudio.play();
         this.m_grounded = false;
-        let veloc = this.rigidbody.linearVelocity;
+        let veloc = this.m_rigidbody.linearVelocity;
         veloc.y = this.jumpForce;
-        this.rigidbody.linearVelocity = veloc;
+        this.m_rigidbody.linearVelocity = veloc;
         //
         setTimeout(() => {
             this.m_lockJump = false;
@@ -133,8 +142,8 @@ export class PlayerControllerBall extends PlayerController {
         this.m_lockInput = true;
         //this.spine.setAnimation(0, '2_hurt', true);
         this.hurtAudio.play();
-        this.rigidbody.linearVelocity = v2();
-        this.rigidbody.sleep;
+        this.m_rigidbody.linearVelocity = v2();
+        this.m_rigidbody.sleep;
         setTimeout(() => {
             director.emit(GameEvent.GAME_FINISH, false);
         }, 500);
@@ -173,20 +182,27 @@ export class PlayerControllerBall extends PlayerController {
     onPlayerStop(position: Vec3) {
         if (this.m_finish)
             return;
-        this.spine.SetAnim('3_laugh', true);
+        this.m_spine.SetAnim('3_laugh', true);
         this.finishAudio.play();
-        this.rigidbody.sleep;
+        this.m_rigidbody.sleep;
         this.m_lockInput = true;
         this.m_finish = true;
-        this.rigidbody.sleep();
+        this.m_rigidbody.sleep();
         //tween
         let quat: Quat = new Quat();
         Quat.fromEuler(quat, 0, 0, 0);
         let move = tween(this.node).to(0.5, { worldPosition: v3(position.x, position.y, 0), rotation: quat })
-        let scale = tween(this.spine.node).to(0.25, { scale: v3() });
+        let scale = tween(this.m_spine.node).to(0.25, { scale: v3() });
         tween(this.node).sequence(move, scale).call(() => {
             director.emit(GameEvent.GAME_FINISH, true);
         }).start();
+    }
+
+    onX4(active: boolean) {
+        let ratio = active ? 4 : 1;
+        tween(this.node).to(0.25, { scale: this.m_baseScale.multiplyScalar(ratio) }).start();
+        this.m_ratioSize = ratio;
+        this.m_big = active;
     }
 
     onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
@@ -201,8 +217,8 @@ export class PlayerControllerBall extends PlayerController {
                 setTimeout(() => {
                     this.m_bubbleColider.enabled = false;
                     this.bubble.active = false;
-                    this.rigidbody.gravityScale = 10;
-                    this.rigidbody.fixedRotation = false;
+                    this.m_rigidbody.gravityScale = 10;
+                    this.m_rigidbody.fixedRotation = false;
                     director.emit(GameEvent.PLAYER_NORMAL);
                 }, 1);
                 break;
@@ -212,7 +228,7 @@ export class PlayerControllerBall extends PlayerController {
                     setTimeout(() => {
                         director.emit(GameEvent.GAME_TRIGGER_MOVE_RIGHT);
                         this.onPlayerMoveStop();
-                        this.rigidbody.sleep();
+                        this.m_rigidbody.sleep();
                     }, 150);
                     setTimeout(() => {
                         otherCollider.node.destroy();
@@ -245,11 +261,11 @@ export class PlayerControllerBall extends PlayerController {
 
         if (this.m_lockInput)
             return;
-        let veloc = this.rigidbody.linearVelocity.clone();
+        let veloc = this.m_rigidbody.linearVelocity.clone();
         let current = veloc.clone();
         if (this.m_grounded) {
-            this.rigidbody.applyTorque(-this.m_moveDirection * this.groundSpeedX * (this.rigidbody.getMass() / this.m_baseMass) * this.m_ratioSize, true);
-            veloc = this.rigidbody.linearVelocity.clone();
+            this.m_rigidbody.applyTorque(-this.m_moveDirection * this.groundSpeedX * (this.m_rigidbody.getMass() / this.m_baseMass) * this.m_ratioSize, true);
+            veloc = this.m_rigidbody.linearVelocity.clone();
         }
         else if (this.m_moveDirection != 0)
             veloc.x += this.m_moveDirection * this.airSpeedX;
@@ -257,6 +273,18 @@ export class PlayerControllerBall extends PlayerController {
             veloc.x = this.maxSpeedX;
         else if (veloc.x < -this.maxSpeedX)
             veloc.x = -this.maxSpeedX;
-        this.rigidbody.linearVelocity = current.lerp(veloc, this.xDamping * dt);
+        this.m_rigidbody.linearVelocity = current.lerp(veloc, this.xDamping * dt);
+    }
+
+    addForceY(force: number) {
+        let veloc = this.m_rigidbody.linearVelocity;
+        veloc.y = force;
+        this.m_rigidbody.linearVelocity = veloc;
+        //
+        this.m_grounded = false;
+    }
+
+    addForce(force: Vec2) {
+        this.m_rigidbody.linearVelocity = force;
     }
 }

@@ -5,43 +5,26 @@ const { ccclass, property } = _decorator;
 @ccclass('PlayerController')
 export class PlayerController extends Component {
 
-    rigidbody: RigidBody2D = null;
-    spine: BaseSpine = null;
+    protected m_rigidbody: RigidBody2D = null;
+    protected m_spine: BaseSpine = null;
 
-    m_control: boolean = true;
-    m_lockInput: boolean = false;
-    m_lockJump: boolean = false;
-    m_moveDirection: number = 0;
-    m_ratioSize: number = 1;
-    m_baseScale: Vec3 = Vec3.ONE;
-    m_baseMass: number;
-    m_grounded: boolean = false;
-    m_immortal: boolean = false;
-    m_finish: boolean = false;
+    //
+
+    protected m_control: boolean = true;
+
+    get Control() {
+        return this.m_control;
+    }
+
+    set Control(value: boolean) {
+        this.m_control = value;
+    }
+
+    //
+
+    protected m_big: boolean = false;
 
     get isBig() {
-        return this.m_ratioSize > 1;
-    }
-
-    onControl(Control: boolean) {
-        this.m_control = Control;
-    }
-
-    onX4(active: boolean) {
-        let ratio = active ? 4 : 1;
-        tween(this.node).to(0.25, { scale: this.m_baseScale.multiplyScalar(ratio) }).start();
-        this.m_ratioSize = ratio;
-    }
-
-    addForceY(force: number) {
-        let veloc = this.rigidbody.linearVelocity;
-        veloc.y = force;
-        this.rigidbody.linearVelocity = veloc;
-        //
-        this.m_grounded = false;
-    }
-
-    addForce(force: Vec2) {
-        this.rigidbody.linearVelocity = force;
+        return this.m_big;
     }
 }

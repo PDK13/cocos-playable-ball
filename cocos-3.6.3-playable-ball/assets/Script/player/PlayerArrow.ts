@@ -28,7 +28,7 @@ export class PlayerArrow extends Component {
 
     start() {
         this.targetCurrent = this.ballR;
-        this.ballB.onControl(false);
+        this.ballB.Control(false);
         this.camera.onTargetSwitch(this.ballR.node);
         this.arrowR.active = true;
         this.arrowB.active = false;
@@ -48,8 +48,8 @@ export class PlayerArrow extends Component {
 
     private onSwitch() {
         this.targetCurrent = this.targetCurrent == this.ballR ? this.ballB : this.ballR;
-        this.ballR.onControl(this.targetCurrent == this.ballR);
-        this.ballB.onControl(this.targetCurrent == this.ballB);
+        this.ballR.Control(this.targetCurrent == this.ballR);
+        this.ballB.Control(this.targetCurrent == this.ballB);
         this.camera.onTargetSwitch(this.targetCurrent.node);
         this.arrowR.active = this.targetCurrent == this.ballR;
         this.arrowB.active = this.targetCurrent == this.ballB;
