@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "game-w-split-skin-Wonder",
+    "_name": "game-wonder-split-skin",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -154,7 +154,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 753.8983050847457,
+    "_orthoHeight": 683.4314980793854,
     "_near": 1,
     "_far": 1000,
     "_color": {
