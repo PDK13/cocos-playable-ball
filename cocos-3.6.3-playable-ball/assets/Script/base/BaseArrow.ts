@@ -41,9 +41,9 @@ export class BaseArrow extends Component {
     lateUpdate(deltaTime: number) {
         if (this.playerCurrent == null)
             return;
-        var PosCurrent = this.playerCurrent.node.position;
+        var PosCurrent = this.playerCurrent.node.worldPosition;
         PosCurrent.add(v3(0, this.offsetPosY, 0));
-        this.node.position = PosCurrent;
+        this.node.worldPosition = PosCurrent;
     }
 
     //
