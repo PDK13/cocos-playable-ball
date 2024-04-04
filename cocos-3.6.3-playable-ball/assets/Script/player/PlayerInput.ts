@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, input, Input, KeyCode, director, CCBoolean, Button, Vec3} from 'cc';
+import { _decorator, Component, Node, input, Input, KeyCode, director, CCBoolean, Button, Vec3 } from 'cc';
 import GameEvent from '../GameEvent';
 import Loader from '../Loader';
 const { ccclass, property } = _decorator;
@@ -27,15 +27,15 @@ export class PlayerInput extends Component {
     m_keyLeftActive: boolean = false;
     m_keyRightActive: boolean = false;
     m_jumpActive: boolean = false;
+    m_switchIndex: number = 0;
 
-    onLoad () {
-        if(this.directStore)            
+    onLoad() {
+        if (this.directStore)
             return;
-        if(this.loop)
-        {            
+        if (this.loop) {
             this.buttonRight.getChildByName('hand').active = Loader.finish;
             this.buttonSwitch.getChildByName('hand').active = Loader.finish;
-            if(Loader.finish)
+            if (Loader.finish)
                 return;
         }
 
@@ -60,45 +60,37 @@ export class PlayerInput extends Component {
         director.on(GameEvent.GAME_STORE_BUTTON, this.onHideControl, this);
     }
 
-    onJumpStart()
-    {
+    onJumpStart() {
         this.m_jumpActive = true;
     }
 
-    onJumpEnd()
-    {
+    onJumpEnd() {
         this.m_jumpActive = false;
     }
 
-    onLeftStart()
-    {
+    onLeftStart() {
         this.m_keyLeftActive = true;
     }
 
-    onLeftEnd()
-    {                
+    onLeftEnd() {
         this.m_keyLeftActive = false;
-        if(!this.m_keyRightActive)
+        if (!this.m_keyRightActive)
             director.emit(GameEvent.PLAYER_MOVE_STOP);
     }
 
-    onRightStart()
-    {
+    onRightStart() {
         this.m_keyRightActive = true;
     }
 
-    onRightEnd()
-    {
+    onRightEnd() {
         this.m_keyRightActive = false;
-        if(!this.m_keyLeftActive)
+        if (!this.m_keyLeftActive)
             director.emit(GameEvent.PLAYER_MOVE_STOP);
     }
 
-    onKeyPressed(event)
-    {
+    onKeyPressed(event) {
         let keyCode = event.keyCode;
-        switch(keyCode)
-        {
+        switch (keyCode) {
             case KeyCode.ARROW_LEFT:
                 this.m_keyLeftActive = true;
                 break;
@@ -111,24 +103,23 @@ export class PlayerInput extends Component {
                 this.m_jumpActive = true;
                 break;
             case KeyCode.TAB:
-                director.emit(GameEvent.PLAYER_SWITCH);
+                this.m_switchIndex = this.m_switchIndex == 0 ? 1 : 0;
+                director.emit(GameEvent.PLAYER_SWITCH, this.m_switchIndex);
                 break;
         }
     }
 
-    onKeyReleased(event)
-    {
+    onKeyReleased(event) {
         let keyCode = event.keyCode;
-        switch(keyCode)
-        {
+        switch (keyCode) {
             case KeyCode.ARROW_LEFT:
                 this.m_keyLeftActive = false;
-                if(!this.m_keyRightActive)
+                if (!this.m_keyRightActive)
                     director.emit(GameEvent.PLAYER_MOVE_STOP);
                 break;
             case KeyCode.ARROW_RIGHT:
                 this.m_keyRightActive = false;
-                if(!this.m_keyLeftActive)
+                if (!this.m_keyLeftActive)
                     director.emit(GameEvent.PLAYER_MOVE_STOP);
                 break;
             case KeyCode.SPACE:
@@ -139,32 +130,30 @@ export class PlayerInput extends Component {
     }
 
     update(dt: number) {
-        if(this.m_keyLeftActive)
+        if (this.m_keyLeftActive)
             director.emit(GameEvent.PLAYER_MOVE_LEFT);
-        else if(this.m_keyRightActive)
+        else if (this.m_keyRightActive)
             director.emit(GameEvent.PLAYER_MOVE_RIGHT);
 
-        if(this.m_jumpActive)
+        if (this.m_jumpActive)
             director.emit(GameEvent.PLAYER_JUMP);
     }
 
-    moveOnclick()
-    {
-        if(this.directStore || Loader.finish)
-        {
+    moveOnclick() {
+        if (this.directStore || Loader.finish) {
             this.buttonRight.getComponent(Button).interactable = false;
             return;
         }
         director.emit(GameEvent.PLAYER_MOVE_RIGHT, false);
     }
 
-    switchOnClick(){
-        if(this.directStore || Loader.finish)
-        {
+    switchOnClick() {
+        if (this.directStore || Loader.finish) {
             this.buttonSwitch.getComponent(Button).interactable = false;
             return;
         }
-        director.emit(GameEvent.PLAYER_SWITCH);
+        this.m_switchIndex = this.m_switchIndex == 0 ? 1 : 0;
+        director.emit(GameEvent.PLAYER_SWITCH, this.m_switchIndex);
     }
 
     onHideControl(position: Vec3) {

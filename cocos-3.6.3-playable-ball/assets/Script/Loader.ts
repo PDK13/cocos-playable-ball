@@ -141,7 +141,7 @@ export default class Loader extends Component {
         director.off(GameEvent.GAME_TRIGGER_MOVE_RIGHT, this.onMoveRight, this)
     }
 
-    switchOnclick() {
+    switchOnclick(SwitchIndex: number) {
         if (this.switchShow || !this.auto || Loader.finish || this.directStore)
             return;
         this.switchShow = true;

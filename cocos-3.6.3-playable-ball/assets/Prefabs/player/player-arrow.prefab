@@ -351,9 +351,10 @@
     "fileId": "95oF5WR3NJ1o28exdnu1I4"
   },
   {
-    "__type__": "432fflSITFHWIyu1Dy0orAm",
+    "__type__": "cb914uMZS5KxrHbPiLmIFxX",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -361,21 +362,15 @@
     "__prefab": {
       "__id__": 17
     },
-    "offsetPosY": 150,
-    "ballR": null,
-    "arrowR": {
-      "__id__": 2
-    },
-    "ballB": null,
-    "arrowB": {
-      "__id__": 8
-    },
+    "offsetPosY": 40,
+    "Player": [],
+    "Arrow": [],
     "camera": null,
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "e9bujZUaZB2o0gIl5K3i7B"
+    "fileId": "6d5syoNU5KMqjJVmHsMG5C"
   },
   {
     "__type__": "cc.PrefabInfo",
