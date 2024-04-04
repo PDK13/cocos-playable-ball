@@ -34,7 +34,7 @@ export class BaseSpine extends Component {
 
     //
 
-    public SetSkin(...SkinMix: any[]){
+    public SetSkin(...SkinMix: any[]) {
         let BaseSkin = new spine.Skin('base-char');
         let BaseData = this.spine._skeleton.data;
         //
@@ -55,6 +55,13 @@ export class BaseSpine extends Component {
 
     public onStop(): void {
         this.spine.timeScale = 0;
+    }
+
+    //
+
+    public SetInitMix(AnimFrom: string, AnimTo: string, Duration: number) {
+        //Setting mix between 2 animation in fixed duration!
+        this.spine.setMix(AnimFrom, AnimTo, Duration);
     }
 
     //
@@ -110,7 +117,7 @@ export class BaseSpine extends Component {
         return Duration / Scale;
     }
 
-    public SetAnimEmty(Index: number, MixDuration: number){
+    public SetAnimEmty(Index: number, MixDuration: number) {
         this.spine.getState().setEmptyAnimation(Index, MixDuration);
     }
 
