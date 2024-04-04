@@ -14,7 +14,7 @@ export class BaseObject extends Component {
         this.node.position = v3(Pos.x + PosAdd.x, Pos.y + PosAdd.y, this.node.position.z);
     }
 
-    public SetPosV3(Pos: Vec3, PosAdd: Vec2 = new Vec2(0, 0)) {
+    public SetPosV3(Pos: Vec3, PosAdd: Vec3 = new Vec3(0, 0, 0)) {
         this.node.position = v3(Pos.x + PosAdd.x, Pos.y + PosAdd.y, this.node.position.z);
     }
 

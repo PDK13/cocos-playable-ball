@@ -85,9 +85,8 @@ export default class CameraMovement extends Component {
             if (this.m_syncY)
                 this.m_targetY = target.y;
             else {
-                //if ((this.m_targetY - target.y) > 100)
-                //    this.m_targetY = target.y;
-                //
+                if ((this.m_targetY - target.y) > 100)
+                    this.m_targetY = target.y;
                 target.y = this.m_targetY + 300;
             }
             //
