@@ -80,7 +80,7 @@ export default class CameraMovement extends Component {
             this.node.worldPosition = this.m_target;
         }
         else {
-            target = this.player.position.clone();
+            target = this.player.worldPosition.clone();
             //
             if (this.m_syncY)
                 this.m_targetY = target.y;
@@ -115,7 +115,7 @@ export default class CameraMovement extends Component {
             target.y += this.offset.y;
             //
             this.m_target = this.m_target.lerp(target, this.smoothTime);
-            this.node.position = this.m_target;
+            this.node.worldPosition = this.m_target;
         }
         //
         if (this.paralax) {
