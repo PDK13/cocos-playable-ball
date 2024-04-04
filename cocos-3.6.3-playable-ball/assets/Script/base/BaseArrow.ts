@@ -30,7 +30,7 @@ export class BaseArrow extends Component {
             this.Player[index].Control = false;
         //
         this.Arrow[0].active = true;
-        for (let index = 1; index < this.Player.length; index++)
+        for (let index = 1; index < this.Arrow.length; index++)
             this.Arrow[index].active = false;
         //
         this.camera.onTargetSwitch(this.playerCurrent.node);
