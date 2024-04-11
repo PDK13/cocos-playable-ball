@@ -62,11 +62,11 @@ export default class CameraMovement extends Component {
         this.m_parallaxes = this.getComponentsInChildren(BackgroundParallax);
         //
         if (this.lockX || this.lockY)
-            this.m_lock = this.node.position.clone();
+            this.m_lock = this.node.worldPosition.clone();
     }
 
     start() {
-        this.m_target = this.node.position.clone();
+        this.m_target = this.node.worldPosition.clone();
         let cam = this.getComponent(Camera);
         let ratio = 540 / cam.orthoHeight;
         this.background.scale = new Vec3(2 / ratio, 2 / ratio, 1);
@@ -77,6 +77,7 @@ export default class CameraMovement extends Component {
         if (this.m_stop) {
             target = this.m_finishPos;
             this.m_target = this.m_target.lerp(target, this.smoothTime);
+            this.m_target.z = 1000;
             this.node.worldPosition = this.m_target;
         }
         else {
@@ -115,6 +116,7 @@ export default class CameraMovement extends Component {
             target.y += this.offset.y;
             //
             this.m_target = this.m_target.lerp(target, this.smoothTime);
+            this.m_target.z = 1000;
             this.node.worldPosition = this.m_target;
         }
         //
