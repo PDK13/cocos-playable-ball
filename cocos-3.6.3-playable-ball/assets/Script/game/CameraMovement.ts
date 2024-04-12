@@ -1,10 +1,16 @@
-import { _decorator, Component, Node, Vec3, v3, Camera, CCFloat, director, tween, Tween, AudioSource, CCBoolean, Vec2, v2 } from 'cc';
-import { BackgroundParallax } from './BackgroundParallax';
+import { _decorator, Component, Node, CCFloat, view, screen, Vec3, AudioSource, CCBoolean, Camera, Tween, Vec2, director, tween, v2, v3 } from 'cc';
 import GameEvent from '../GameEvent';
+import { BackgroundParallax } from './BackgroundParallax';
 const { ccclass, property } = _decorator;
 
 @ccclass('CameraMovement')
 export default class CameraMovement extends Component {
+
+    @property(CCBoolean)
+    lockX: boolean = false;
+
+    @property(CCBoolean)
+    lockY: boolean = false;
 
     @property(CCFloat)
     smoothTime = 0.1;
@@ -15,10 +21,13 @@ export default class CameraMovement extends Component {
     //
 
     @property(CCBoolean)
-    lockX: boolean = false;
+    othorScreen: boolean = true;
 
-    @property(CCBoolean)
-    lockY: boolean = false;
+    @property(CCFloat)
+    othorLandscape: number = 1;
+
+    @property(CCFloat)
+    othorPortrait: number = 2.5;
 
     //
 
@@ -37,13 +46,16 @@ export default class CameraMovement extends Component {
     paralax: boolean = true;
 
     @property(Node)
-    player: Node | null = null;
-
-    @property(Node)
     background: Node | null = null;
 
-    m_parallaxes: BackgroundParallax[] = [];
+    @property(Node)
+    player: Node | null = null;
 
+    //
+
+    m_camera: Camera = null;
+    m_orthoHeight: number = 0;
+    m_parallaxes: BackgroundParallax[] = [];
     m_lock: Vec3;
     m_target: Vec3;
     m_stop: boolean = false;
@@ -57,7 +69,11 @@ export default class CameraMovement extends Component {
         director.on(GameEvent.PLAYER_GROUND, this.onPlayerGround, this);
         director.on(GameEvent.PLAYER_BUBBLE, this.onPlayerBubble, this);
         director.on(GameEvent.PLAYER_NORMAL, this.onPlayerNormal, this);
-        //director.on(GameEvent.PLAYER_FLAG, this.onPlayerFlag, this);
+        director.on(GameEvent.PLAYER_FLAG, this.onPlayerFlag, this);
+        //
+        if (this.m_camera == null)
+            this.m_camera = this.getComponent(Camera);
+        this.m_orthoHeight = this.m_camera.orthoHeight.valueOf();
         //
         this.m_parallaxes = this.getComponentsInChildren(BackgroundParallax);
         //
@@ -66,10 +82,16 @@ export default class CameraMovement extends Component {
     }
 
     start() {
+        //NOTE: This event must add from Start to get event!
+        view.on('canvas-resize', () => {
+            this.onCanvasResize(false);
+            this.onUpdateBackground();
+        });
+        this.onCanvasResize(true);
+        //
         this.m_target = this.node.worldPosition.clone();
-        let cam = this.getComponent(Camera);
-        let ratio = 540 / cam.orthoHeight;
-        this.background.scale = new Vec3(2 / ratio, 2 / ratio, 1);
+        //
+        this.onUpdateBackground();
     }
 
     lateUpdate(dt: number) {
@@ -77,7 +99,6 @@ export default class CameraMovement extends Component {
         if (this.m_stop) {
             target = this.m_finishPos;
             this.m_target = this.m_target.lerp(target, this.smoothTime);
-            this.m_target.z = 1000;
             this.node.worldPosition = this.m_target;
         }
         else {
@@ -116,7 +137,6 @@ export default class CameraMovement extends Component {
             target.y += this.offset.y;
             //
             this.m_target = this.m_target.lerp(target, this.smoothTime);
-            this.m_target.z = 1000;
             this.node.worldPosition = this.m_target;
         }
         //
@@ -125,6 +145,27 @@ export default class CameraMovement extends Component {
                 element.excute();
             });
         }
+    }
+
+    onCanvasResize(Force: Boolean) {
+        if (!this.othorScreen)
+            return;
+        //
+        const screenSize = screen.windowSize;
+        const viewScaleX = view.getScaleX();
+        const viewScaleY = view.getScaleY();
+        let w = screenSize.width / viewScaleX;
+        let h = screenSize.height / viewScaleY;
+        //
+        if (w < h)
+            this.m_camera.orthoHeight = this.m_orthoHeight * this.othorPortrait;
+        else
+            this.m_camera.orthoHeight = this.m_orthoHeight * this.othorLandscape;
+    }
+
+    onUpdateBackground() {
+        let ratio = 540 / this.m_camera.orthoHeight;
+        this.background.scale = new Vec3(2 / ratio, 2 / ratio, 1);
     }
 
     onPlayerFlag() {

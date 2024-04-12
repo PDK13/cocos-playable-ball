@@ -157,7 +157,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 1024.7852760736196,
+    "_orthoHeight": 1016.9325153374233,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -7797,7 +7797,10 @@
       "__id__": 400
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -8080,7 +8083,10 @@
       "__id__": 409
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -8363,7 +8369,10 @@
       "__id__": 418
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -8646,7 +8655,10 @@
       "__id__": 427
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -9212,7 +9224,10 @@
       "__id__": 445
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -9495,7 +9510,10 @@
       "__id__": 454
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -9839,7 +9857,10 @@
       "__id__": 464
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -10122,7 +10143,10 @@
       "__id__": 473
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -10405,7 +10429,10 @@
       "__id__": 482
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -10688,7 +10715,10 @@
       "__id__": 491
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -11254,7 +11284,10 @@
       "__id__": 509
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -11537,7 +11570,10 @@
       "__id__": 518
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -11881,7 +11917,10 @@
       "__id__": 528
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -12164,7 +12203,10 @@
       "__id__": 537
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -12447,7 +12489,10 @@
       "__id__": 546
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -12730,7 +12775,10 @@
       "__id__": 555
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -13296,7 +13344,10 @@
       "__id__": 573
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -13579,7 +13630,10 @@
       "__id__": 582
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -13923,7 +13977,10 @@
       "__id__": 592
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -14206,7 +14263,10 @@
       "__id__": 601
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -14489,7 +14549,10 @@
       "__id__": 610
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -14772,7 +14835,10 @@
       "__id__": 619
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -15338,7 +15404,10 @@
       "__id__": 637
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -15621,7 +15690,10 @@
       "__id__": 646
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -15965,7 +16037,10 @@
       "__id__": 656
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -16248,7 +16323,10 @@
       "__id__": 665
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -16531,7 +16609,10 @@
       "__id__": 674
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -16814,7 +16895,10 @@
       "__id__": 683
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -17380,7 +17464,10 @@
       "__id__": 701
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -17663,7 +17750,10 @@
       "__id__": 710
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -18007,7 +18097,10 @@
       "__id__": 720
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "02b90379-2af1-4ecd-a88c-28a79c803ba2",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -18290,7 +18383,10 @@
       "__id__": 729
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "3b9dc3f9-df40-4741-bb57-56b44d068043",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -18573,7 +18669,10 @@
       "__id__": 738
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "30dfa2ae-d48d-4ebc-8318-7a59d40df7d0",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -18856,7 +18955,10 @@
       "__id__": 747
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d6294961-8521-425c-89ae-c050fcd0366b",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -19422,7 +19524,10 @@
       "__id__": 765
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "d417d8c0-1cb7-4a01-8239-33258fc782e3",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"
@@ -19705,7 +19810,10 @@
       "__id__": 774
     },
     "spineEvent": false,
-    "Skeleton": null,
+    "Skeleton": {
+      "__uuid__": "53c36bc4-f440-49df-a308-e7736fb6df93",
+      "__expectedType__": "sp.SkeletonData"
+    },
     "Skin": [
       "1",
       "w1"

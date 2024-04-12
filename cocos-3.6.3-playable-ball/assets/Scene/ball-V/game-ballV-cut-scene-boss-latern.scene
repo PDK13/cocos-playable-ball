@@ -154,7 +154,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 714.0078843626807,
+    "_orthoHeight": 717.5757575757575,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -1654,7 +1654,7 @@
     },
     "lockX": true,
     "lockY": true,
-    "limit": true,
+    "limit": false,
     "limitMax": {
       "__type__": "cc.Vec2",
       "x": 1000,
@@ -1938,7 +1938,7 @@
     "node": {
       "__id__": 48
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": null,
     "_clip": {
       "__uuid__": "93039349-f9d8-429d-abef-514ba51dc1f5",
