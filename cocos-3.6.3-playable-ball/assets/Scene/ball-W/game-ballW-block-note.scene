@@ -157,7 +157,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 1016.9325153374233,
+    "_orthoHeight": 675.84,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -3014,14 +3014,17 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "lockX": true,
+    "lockY": true,
     "smoothTime": 0.1,
     "offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "lockX": true,
-    "lockY": true,
+    "othorScreen": true,
+    "othorLandscape": 1,
+    "othorPortrait": 2.5,
     "limit": false,
     "limitMax": {
       "__type__": "cc.Vec2",
@@ -3034,11 +3037,11 @@
       "y": -1000
     },
     "paralax": true,
-    "player": {
-      "__id__": 89
-    },
     "background": {
       "__id__": 82
+    },
+    "player": {
+      "__id__": 89
     },
     "_id": "e4Jj29Fd1AdaZBQEgOS4HF"
   },

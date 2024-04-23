@@ -25,7 +25,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 190
+      "__id__": 182
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -74,22 +74,19 @@
       },
       {
         "__id__": 171
-      },
-      {
-        "__id__": 177
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 185
+        "__id__": 177
       },
       {
-        "__id__": 187
+        "__id__": 179
       }
     ],
     "_prefab": {
-      "__id__": 189
+      "__id__": 181
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -3978,191 +3975,6 @@
     "fileId": "eeclfnTZhND5cDXn/oLuR5"
   },
   {
-    "__type__": "cc.Node",
-    "_name": "monster-ghost-small-003",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 2
-    },
-    "_children": [
-      {
-        "__id__": 178
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": {
-      "__id__": 184
-    },
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 414.215,
-      "y": 168.676,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0.08715574274765817,
-      "w": 0.9961946980917455
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": -0.3,
-      "y": 0.3,
-      "z": 1
-    },
-    "_layer": 2,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 10
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "spine",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 177
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 179
-      },
-      {
-        "__id__": 181
-      }
-    ],
-    "_prefab": {
-      "__id__": 183
-    },
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": -0.25,
-      "y": 0.25,
-      "z": 1
-    },
-    "_layer": 2,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.UITransform",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 178
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 180
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 621.01,
-      "height": 549
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "53WNrNttdLQa++5vyKHfwG"
-  },
-  {
-    "__type__": "sp.Skeleton",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 178
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 182
-    },
-    "_customMaterial": null,
-    "_srcBlendFactor": 2,
-    "_dstBlendFactor": 4,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 255
-    },
-    "loop": true,
-    "_timeScale": 1,
-    "_useTint": false,
-    "_preCacheMode": 0,
-    "_cacheMode": 0,
-    "_defaultCacheMode": 0,
-    "_debugBones": false,
-    "_debugSlots": false,
-    "_skeletonData": {
-      "__uuid__": "95201585-f29e-45a5-89c0-b2e0d4633491",
-      "__expectedType__": "sp.SkeletonData"
-    },
-    "_premultipliedAlpha": true,
-    "defaultSkin": "1",
-    "defaultAnimation": "idle",
-    "_enableBatch": false,
-    "_sockets": [],
-    "_debugMesh": false,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "3cEZ2BH4RGZrHGSu9yj9vv"
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__id__": 0
-    },
-    "fileId": "60qu2RfjZLTIHcALk/bwSf"
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__id__": 0
-    },
-    "fileId": "a1QrqKHG5Dqb6XZc+DeFa2"
-  },
-  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -4171,7 +3983,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 186
+      "__id__": 178
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -4198,7 +4010,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 188
+      "__id__": 180
     },
     "parallaxEffect": 0.9,
     "camera": null,
