@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, CCFloat, view, screen, Vec3, AudioSource, CCBoolean, Camera, Tween, Vec2, director, tween, v2, v3 } from 'cc';
+import { _decorator, Component, Node, CCFloat, view, screen, Vec3, AudioSource, CCBoolean, Camera, Tween, Vec2, director, tween, v2, v3, Size, Rect } from 'cc';
 import GameEvent from '../GameEvent';
 import { BackgroundParallax } from './BackgroundParallax';
 const { ccclass, property } = _decorator;
@@ -28,6 +28,17 @@ export default class CameraMovement extends Component {
 
     @property(CCFloat)
     othorPortrait: number = 2.5;
+
+    //
+
+    @property(CCBoolean)
+    rectScreen: boolean = false;
+
+    @property(Rect)
+    rectLandScape: Rect = new Rect(0, 0, 1, 1);
+
+    @property(Rect)
+    rectPortrait: Rect = new Rect(0, 0.25, 1, 0.5);
 
     //
 
@@ -148,7 +159,7 @@ export default class CameraMovement extends Component {
     }
 
     onCanvasResize(Force: Boolean) {
-        if (!this.othorScreen)
+        if (!this.othorScreen && !this.rectScreen)
             return;
         //
         const screenSize = screen.windowSize;
@@ -157,10 +168,20 @@ export default class CameraMovement extends Component {
         let w = screenSize.width / viewScaleX;
         let h = screenSize.height / viewScaleY;
         //
-        if (w < h)
-            this.m_camera.orthoHeight = this.m_orthoHeight * this.othorPortrait;
-        else
-            this.m_camera.orthoHeight = this.m_orthoHeight * this.othorLandscape;
+        if (w < h) {
+            //Portrait
+            if (this.othorScreen)
+                this.m_camera.orthoHeight = this.m_orthoHeight * this.othorPortrait;
+            if (this.rectScreen)
+                this.m_camera.rect = this.rectPortrait;
+        }
+        else {
+            //Landscape
+            if (this.othorScreen)
+                this.m_camera.orthoHeight = this.m_orthoHeight * this.othorLandscape;
+            if (this.rectScreen)
+                this.m_camera.rect = this.rectLandScape;
+        }
     }
 
     onUpdateBackground() {
