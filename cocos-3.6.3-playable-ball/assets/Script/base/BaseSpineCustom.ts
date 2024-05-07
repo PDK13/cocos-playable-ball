@@ -12,26 +12,32 @@ export class BaseSpineCustom extends BaseSpine {
     @property([CCString])
     Skin: string[] = ["1", "w1"];
 
-    protected onLoad(): void {
+    protected start(): void {
         this.SetSekeleton(this.Skeleton);
-        this.SetSkin(this.Skin);
+        this.SetSkin(...this.Skin);
     }
 
     //
 
     public SetSekeleton(Data: sp.SkeletonData): void {
+        if (Data == null)
+            return;
         this.Skeleton = Data;
         this.spine.skeletonData = Data;
     }
 
-    public SetSkin(...Skin: any[]){
+    public SetSkin(...Skin: string[]) {
         this.Skin = Skin;
         //
         let BaseSkin = new spine.Skin('base-char');
         let BaseData = this.spine._skeleton.data;
         //
-        Skin.forEach(item => {
-            BaseSkin.addSkin(BaseData.findSkin(item));
+        Skin.forEach(SkinCheck => {
+            //NOTE: For some fucking reason, SkinCheck is a string value, not is a array string value!
+            let SkinData = SkinCheck.split(',');
+            SkinData.forEach(SkinFound => {
+                BaseSkin.addSkin(BaseData.findSkin(SkinFound));
+            });
         });
         //
         this.spine._skeleton.setSkin(BaseSkin);
