@@ -59,6 +59,7 @@ export default class Loader extends Component {
         director.on(GameEvent.GAME_STORE_BUTTON, this.onStoreButton, this);
         if (this.directStore || Loader.finish) {
             this.node.on(Input.EventType.TOUCH_START, this.retryOnclick, this);
+            this.node.getChildByName('press').on(Input.EventType.TOUCH_START, this.retryOnclick, this);
         }
         //
         PhysicsSystem2D.instance.enable = true;
