@@ -1715,6 +1715,21 @@
     "othorScreen": true,
     "othorLandscape": 1,
     "othorPortrait": 2.5,
+    "rectScreen": false,
+    "rectLandScape": {
+      "__type__": "cc.Rect",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    "rectPortrait": {
+      "__type__": "cc.Rect",
+      "x": 0,
+      "y": 0.25,
+      "width": 1,
+      "height": 0.5
+    },
     "limit": true,
     "limitMax": {
       "__type__": "cc.Vec2",
