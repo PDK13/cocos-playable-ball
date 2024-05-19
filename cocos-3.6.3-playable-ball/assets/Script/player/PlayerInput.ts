@@ -141,7 +141,7 @@ export class PlayerInput extends Component {
 
     moveOnclick() {
         if (this.directStore || Loader.finish) {
-            this.buttonRight.getComponent(Button).interactable = false;
+            director.emit(GameEvent.GAME_STORE_BUTTON);
             return;
         }
         director.emit(GameEvent.PLAYER_MOVE_RIGHT, false);
@@ -149,7 +149,7 @@ export class PlayerInput extends Component {
 
     switchOnClick() {
         if (this.directStore || Loader.finish) {
-            this.buttonSwitch.getComponent(Button).interactable = false;
+            director.emit(GameEvent.GAME_STORE_BUTTON);
             return;
         }
         this.m_switchIndex = this.m_switchIndex == 0 ? 1 : 0;

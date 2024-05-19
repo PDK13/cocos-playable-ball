@@ -1,6 +1,6 @@
 import { _decorator, AudioSource, Collider2D, Component, Contact2DType, director, IPhysics2DContact, Node, RigidBody2D, tween, v2, v3 } from 'cc';
-import { PlayerController } from '../player/PlayerController';
 import GameEvent from '../GameEvent';
+import { PlayerController } from '../player/PlayerController';
 const { ccclass, property } = _decorator;
 
 @ccclass('MonsterStatic')
