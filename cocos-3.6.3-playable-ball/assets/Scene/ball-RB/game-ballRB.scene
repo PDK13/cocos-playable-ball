@@ -7132,7 +7132,7 @@
       "__uuid__": "381f2005-f9bb-4567-ba8a-2e3f34ee3482",
       "__expectedType__": "sp.SkeletonData"
     },
-    "_premultipliedAlpha": true,
+    "_premultipliedAlpha": false,
     "defaultSkin": 1,
     "defaultAnimation": "1_idle_ingame",
     "_enableBatch": false,
@@ -7780,7 +7780,7 @@
       "__uuid__": "381f2005-f9bb-4567-ba8a-2e3f34ee3482",
       "__expectedType__": "sp.SkeletonData"
     },
-    "_premultipliedAlpha": true,
+    "_premultipliedAlpha": false,
     "defaultSkin": 2,
     "defaultAnimation": "1_idle_ingame",
     "_enableBatch": false,
