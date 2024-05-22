@@ -69,7 +69,7 @@ export class BaseTimer extends Component {
                     this.maskBar.setContentSize(math.size(Size.x, Size.y));
                 },
                 onComplete: () => {
-                    director.emit(GameEvent.GAME_STORE);
+                    director.emit(GameEvent.GAME_LOSE);
                 },
                 easing: 'linear'
             })

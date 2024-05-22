@@ -75,8 +75,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 368.0000000000001,
-      "y": 207,
+      "x": 960.0000000000001,
+      "y": 540,
       "z": 0
     },
     "_lrot": {
@@ -157,7 +157,7 @@
     "_priority": 1,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 483.82142857142856,
+    "_orthoHeight": 628.5201793721973,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -227,7 +227,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -168.66666666666666,
+      "y": -440,
       "z": 0
     },
     "_lrot": {
@@ -239,8 +239,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.38333333333333336,
-      "y": 0.38333333333333336,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_layer": 33554432,
@@ -1571,7 +1571,7 @@
         "__id__": 45
       }
     ],
-    "_interactable": true,
+    "_interactable": false,
     "_transition": 0,
     "_normalColor": {
       "__type__": "cc.Color",
@@ -1746,7 +1746,6 @@
     "rotateCanvasLandscape": false,
     "changeEditorDevice": false,
     "oneTimeExecution": false,
-    "lastOrientation": false,
     "currentNodeInEditorFlag": false,
     "currentNodeInEditor": null,
     "_id": "90UPM1CvhC4KjMTJ+elsfw"
@@ -3458,8 +3457,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 736,
-      "height": 414
+      "width": 1920,
+      "height": 1080
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -8731,8 +8730,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 736,
-      "height": 414
+      "width": 1920,
+      "height": 1080
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
