@@ -2729,7 +2729,9 @@
     "panelComplete": {
       "__id__": 28
     },
-    "panelLose": null,
+    "panelLose": {
+      "__id__": 52
+    },
     "buttonMoveRight": null,
     "buttonSwitch": null,
     "buttonStore": null,
