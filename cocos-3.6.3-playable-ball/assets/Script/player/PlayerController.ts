@@ -279,10 +279,12 @@ export class PlayerController extends Component {
         }
         else if (this.m_moveDirection != 0)
             veloc.x += this.m_moveDirection * this.airSpeedX;
+
         if (veloc.x > this.maxSpeedX)
             veloc.x = this.maxSpeedX;
         else if (veloc.x < -this.maxSpeedX)
             veloc.x = -this.maxSpeedX;
+        
         this.m_rigidbody.linearVelocity = current.lerp(veloc, this.xDamping * dt);
     }
 
